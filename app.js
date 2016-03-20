@@ -6,7 +6,10 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
-var press = require('./routes/press');
+var press = require('./routes/basic')('Ksenia Winnicki', 'press');
+var projects = require('./routes/basic')('Ksenia Winnicki', 'projects');
+var xena = require('./routes/basic')('Ksenia Winnicki', 'xena');
+var about = require('./routes/basic')('Ksenia Winnicki', 'about');
 var users = require('./routes/user');
 
 var app = express();
@@ -32,6 +35,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 app.use('/press', press);
+app.use('/projects', projects);
+app.use('/xena', xena);
+app.use('/about', about);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
