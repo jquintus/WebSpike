@@ -1,5 +1,4 @@
 extends ../node_modules/jade-bootstrap/_bootstrap
-// extends ../node_modules/jade-bootstrap/layouts/starter
 
 append styles
     // Custom styles for this template
@@ -18,7 +17,10 @@ append body
                     span.icon-bar
                     span.icon-bar
                     span.icon-bar
-                a.navbar-brand(href='#') Web Spikes
+                a.navbar-brand(href='/') Home
+                a.navbar-brand(href='/Press') Press
+                a.navbar-brand(href='/Projects') Projects
+                a.navbar-brand(href='/Xena') Xena
             #navbar.navbar-collapse.collapse
                 form.navbar-form.navbar-right
                     .form-group
@@ -28,3 +30,6 @@ append body
                     button.btn.btn-success(type='submit') Sign in
     block content
     
+        hr
+        footer
+            p © Winicki 2016

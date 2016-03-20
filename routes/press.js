@@ -1,10 +1,10 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+/* GET press page. */
 
 router.get('/', function(req, res) {
-  res.render('index', { title: 'Ksenia Winnicki' });
+    res.render('press');
 });
 
 module.exports = router;
